@@ -16,29 +16,30 @@ Como postar a página do projeto para todos terem acesso e conseguir abrir?
 6 - git push -u origin main 
 * Abra o site https://app.netlify.com/start para publicar a página
 1 - acesse com a conta do GitHub
-2 - Em Import an existing project, clica em GitHub e localize o repositório criado que foi: frontend_rocketnotes_2023 e configure:
+2 - Em Team overview na opção Sites em Import an existing project, clica em GitHub e localize o projeto, repositório criado que foi: frontend_rocketnotes_2023 e configure:
     2.1 Owner = rocketseat
-    2.2 Branch to deply = main
-    2.3 Bse directory
-    2.4 Publish directory = dist
+    2.2 Branch to deploy = main
+    2.3 Base directory
+    2.4 Build command = npm run build
+    2.5 Publish directory = dist
 3 - clica em Deploy site 
 4 - Production deploys aguarde a mensagem de Deploy success! Clica em View
-5 - Aguarde o lnk ser gerado. Em Production vai constar Published
+5 - Na guia Deploys em Deploy log - ver processo de publicação.
 6 - 
 */
 import ReactDOM from 'react-dom/client'; //ReactDOM é uma biblioteca do React que fornece métodos e funcionalidades para manipular o DOM (Document Object Model) e atualizar dinamicamente os elementos da interface com base no estado dos componentes. Ou seja, ReactDOM é uma biblioteca para manipular os elementos que fazem parte da página 
 
-import { ThemeProvider } from 'styled-components'; // importando o ThemProvider de dentro do 'styled-components' e o ThemProvider é uma biblioteca que vai prover um tema global que vai ser o theme.js
+import { ThemeProvider } from 'styled-components'; //importando o ThemProvider de dentro do 'styled-components' e o ThemProvider é uma biblioteca que vai prover um tema global que vai ser o theme.js
 import theme from './styles/theme'; //importando o theme.js de styles
 import GlobalStyles from './styles/global'; //importando o {createGlobalStyle} da pasta styles e do arquivo global.js
 
-import { Routes } from './routes'; // importando {Routes} que foi exportada do index.jsx da pasta routes
+import { Routes } from './routes'; //importando {Routes} que foi exportada do index.jsx da pasta routes
 
 ReactDOM.createRoot(document.getElementById('root')).render(//O react está utilizando o ReactDOM para selecionar e pegar dentro do meu document um elemento pelo ID e o nome desse elemento é o root que vai ser renderizado, que vai ser inserido ali um conteúdo que iremos inserir dentro de <React.StrictMode> e para comentar dentro do <React.StrictMode> inserimos entre chaves o comentário {/* */}   
   <React.StrictMode>
     <ThemeProvider theme={ theme }> {/* estou aplicando o theme.js que é global para os componentes abaixo:*/} 
       <GlobalStyles /> {/*renderizando meus estilos global*/ }
-      <Routes />{/*renderizando minha Routes qeu será a Home como principal e para mudar de página terei que colocar no nome no navegador*/ }
+      <Routes /> {/*renderizando minha Routes qeu será a Home como principal e para mudar de página terei que colocar no nome no navegador*/ }
          
     </ThemeProvider>    
   </React.StrictMode>
