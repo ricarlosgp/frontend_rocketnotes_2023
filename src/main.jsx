@@ -5,9 +5,26 @@ Sempre que houver uma importação entre chaves{} é porque houve uma exportaç�
 import React from 'react'; //importando o React do próprio react. React é uma biblioteca JavaScript. Uma das principais características do React é o uso do Virtual DOM (DOM Virtual). Essa biblioteca react fica na pasta node_modules dentro da pasta react.
 
 Como postar a página do projeto para todos terem acesso e conseguir abrir?
-No GitHub faça:
+* No GitHub faça:
 1 - crie um Repository Name no GitHub do tipo Público para postar todo o projeto
-2 - vá em uploading an existing file e arraste a pasta do projeto para dentro
+* No terminal VSC do projeto faça o GIT
+1 - git init 
+2 - git add .
+3 - git commit -m "publicando"
+4 - git branch -M main  
+5 - git remote add origin https://github.com/ricarlosgp/frontend_rocketnotes_2023.git
+6 - git push -u origin main 
+* Abra o site https://app.netlify.com/start para publicar a página
+1 - acesse com a conta do GitHub
+2 - Em Import an existing project, clica em GitHub e localize o repositório criado que foi: frontend_rocketnotes_2023 e configure:
+    2.1 Owner = rocketseat
+    2.2 Branch to deply = main
+    2.3 Bse directory
+    2.4 Publish directory = dist
+3 - clica em Deploy site 
+4 - Production deploys aguarde a mensagem de Deploy success! Clica em View
+5 - Aguarde o lnk ser gerado. Em Production vai constar Published
+6 - 
 */
 import ReactDOM from 'react-dom/client'; //ReactDOM é uma biblioteca do React que fornece métodos e funcionalidades para manipular o DOM (Document Object Model) e atualizar dinamicamente os elementos da interface com base no estado dos componentes. Ou seja, ReactDOM é uma biblioteca para manipular os elementos que fazem parte da página 
 
