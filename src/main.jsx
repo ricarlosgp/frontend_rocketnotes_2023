@@ -28,7 +28,7 @@ Como postar a página do projeto para todos terem acesso e conseguir abrir?
 6 - 
 */
 import ReactDOM from 'react-dom/client'; //ReactDOM é uma biblioteca do React que fornece métodos e funcionalidades para manipular o DOM (Document Object Model) e atualizar dinamicamente os elementos da interface com base no estado dos componentes. Ou seja, ReactDOM é uma biblioteca para manipular os elementos que fazem parte da página 
-
+import React from 'react';
 import { ThemeProvider } from 'styled-components'; //importando o ThemProvider de dentro do 'styled-components' e o ThemProvider é uma biblioteca que vai prover um tema global que vai ser o theme.js
 import theme from './styles/theme'; //importando o theme.js de styles
 import GlobalStyles from './styles/global'; //importando o {createGlobalStyle} da pasta styles e do arquivo global.js
@@ -37,16 +37,12 @@ import { Routes } from './routes'; //importando {Routes} que foi exportada do in
 
 ReactDOM.createRoot(document.getElementById('root')).render(//O react está utilizando o ReactDOM para selecionar e pegar dentro do meu document um elemento pelo ID e o nome desse elemento é o root que vai ser renderizado, que vai ser inserido ali um conteúdo que iremos inserir dentro de <React.StrictMode> e para comentar dentro do <React.StrictMode> inserimos entre chaves o comentário {/* */}   
   <React.StrictMode>
-    <ThemeProvider theme={ theme }> {/* estou aplicando o theme.js que é global para os componentes abaixo:*/} 
-      <GlobalStyles /> {/*renderizando meus estilos global*/ }
-      <Routes /> {/*renderizando minha Routes qeu será a Home como principal e para mudar de página terei que colocar no nome no navegador*/ }
-         
-    </ThemeProvider>    
-  </React.StrictMode>
+    <ThemeProvider theme={ theme }> 
+      <GlobalStyles /> 
+      <Routes />                
+    </ThemeProvider>  
+  </React.StrictMode>,
 )
-
-
-
 
 
 
@@ -86,4 +82,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(//O react está util
 //     </ThemeProvider>    
 //   </React.StrictMode>
 // )
+
+
+
+
+
+
+
+
+
+
+
+
+
 
