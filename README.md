@@ -9,7 +9,7 @@ README.md é arquivo de leia-me,  é um arquivo markdown e nele a gente coloca i
 # Desenvolvendo aplicação Frontend
 A idéia desse projeto é desenvolver uma aplicação para gerenciar anotações e links úteis.
 
-[😀=> Link do projeto <=😀](https://frontendrocketnotes20223.netlify.app/)
+[😀=> https://frontendrocketnotes20223.netlify.app/ <=😀]
 
 ## 🛠 Habilidades
 Javascript, HTML, CSS, ReactJS, Vite...
