@@ -28,7 +28,7 @@ Como postar a página do projeto para todos terem acesso e conseguir abrir?
 6 - 
 */
 import ReactDOM from 'react-dom/client'; //ReactDOM é uma biblioteca do React que fornece métodos e funcionalidades para manipular o DOM (Document Object Model) e atualizar dinamicamente os elementos da interface com base no estado dos componentes. Ou seja, ReactDOM é uma biblioteca para manipular os elementos que fazem parte da página 
-import React from 'react';
+import React from 'react'; //importando a biblioteca react e despejando em React
 import { ThemeProvider } from 'styled-components'; //importando o ThemProvider de dentro do 'styled-components' e o ThemProvider é uma biblioteca que vai prover um tema global que vai ser o theme.js
 import theme from './styles/theme'; //importando o theme.js de styles
 import GlobalStyles from './styles/global'; //importando o {createGlobalStyle} da pasta styles e do arquivo global.js
@@ -43,17 +43,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(//O react está util
     </ThemeProvider>  
   </React.StrictMode>,
 )
-
-
-
-
-
-
-
-
-
-
-
 
 // ANTES DA CRIAÇÃO RAS ROTAS/ROUTES
 
